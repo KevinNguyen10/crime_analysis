@@ -46,11 +46,16 @@ for k, v in data.items():
         if (k1 in keys_to_keep):
             new_list.append(k1)
             new_list.append(v2)
-
-# for every 2 items in the list create a list of 2 items
-list_1 = []
+# %%
+from collections import defaultdict # to create a dictionary with the current values
+# for every 2 items in the list create a list of tuples
+new_tuple = []
 for i in range(0, len(new_list), 2):
-    list_1.append(new_list[i:i+2])
-list_1
+    new_tuple = new_tuple + [(new_list[i], new_list[i+1])]
+
+final = defaultdict(list)
+for k, v in new_tuple:
+    final[k].append(v)
 
 # %%
+final
