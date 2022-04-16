@@ -69,7 +69,7 @@ df = df.fillna(value='UNKNOWN')
 # Transpose the dataframe
 df = df.T
 # %%
-# display the dataframe
-df
+# save the dataframe to a csv file
+df.to_csv('crime_data.csv')
 
 # %%
