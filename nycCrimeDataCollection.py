@@ -58,4 +58,7 @@ for k, v in new_tuple:
     final[k].append(v)
 
 # %%
-final
+# quick summary of the data dimensions
+for index, item in enumerate(final):
+    print(f'{index}: {item} - {len(final[item])}') # pandas must have equal number of rows and columns so we have to transpose the data first
+# %%
