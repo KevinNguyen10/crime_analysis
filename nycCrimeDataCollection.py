@@ -53,7 +53,7 @@ new_tuple = []
 for i in range(0, len(new_list), 2):
     new_tuple = new_tuple + [(new_list[i], new_list[i+1])]
 
-final = defaultdict(list)
+final = defaultdict(list) # final dataset
 for k, v in new_tuple:
     final[k].append(v)
 
@@ -61,4 +61,15 @@ for k, v in new_tuple:
 # quick summary of the data dimensions
 for index, item in enumerate(final):
     print(f'{index}: {item} - {len(final[item])}') # pandas must have equal number of rows and columns so we have to transpose the data first
+# %%
+# put the data into a dataframe with the orientation as index
+df = pd.DataFrame.from_dict(final, orient='index')
+# replace the None values as UNKNOWN 
+df = df.fillna(value='UNKNOWN')
+# Transpose the dataframe
+df = df.T
+# %%
+# display the dataframe
+df
+
 # %%
