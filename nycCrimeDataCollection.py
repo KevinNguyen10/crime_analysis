@@ -33,8 +33,6 @@ def get_data(url):
 data = get_data(crime_data_NYC)
 
 # %%
-data
-# %%
 keys_to_keep = ['cmplnt_num', 'cmplnt_fr_dt', 'crm_atpt_cptd_cd', 
                 'juris_desc', 'law_cat_cd', 'loc_of_occur_desc', 
                 'ofns_desc', 'susp_age_group', 'susp_race', 'susp_sex', 
