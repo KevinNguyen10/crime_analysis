@@ -2,9 +2,6 @@
 # import necesary libraries
 import requests
 import pandas as pd
-import numpy as np
-import streamlit as st
-import plotly.express as px
 
 # %%
 # create a function to get the data from the API
